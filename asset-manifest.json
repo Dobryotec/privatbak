@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/privatbak/static/css/main.7acaea2f.css",
+    "main.js": "/privatbak/static/js/main.688912d8.js",
+    "index.html": "/privatbak/index.html",
+    "main.7acaea2f.css.map": "/privatbak/static/css/main.7acaea2f.css.map",
+    "main.688912d8.js.map": "/privatbak/static/js/main.688912d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.688912d8.js"
+  ]
+}
