@@ -1,4 +1,4 @@
-import { currencyReducer } from './slice';
+import { currencyReducer, setBaseCurrency } from './slice';
 import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -15,6 +15,7 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'currency',
   storage,
+  whitelist: ['baseCurrency'],
 };
 
 const persistedReducer = persistReducer(persistConfig, currencyReducer);

@@ -1,8 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchBaseCurrency } from './thunk';
+import { fetchBaseCurrency, fetchChangeCurrensy } from './thunk';
 
 const initialState = {
   baseCurrency: '',
+  result: 0,
+  query: {
+    to: '',
+    from: '',
+    amount: '',
+  },
 };
 
 const currencySlice = createSlice({
@@ -14,9 +20,14 @@ const currencySlice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(fetchBaseCurrency.fulfilled, (state, action) => {
-      state.baseCurrency = action.payload;
-    });
+    builder
+      .addCase(fetchBaseCurrency.fulfilled, (state, action) => {
+        state.baseCurrency = action.payload;
+      })
+      .addCase(fetchChangeCurrensy.fulfilled, (state, action) => {
+        state.result = action.payload.result;
+        state.query = action.payload.query;
+      });
   },
 });
 
