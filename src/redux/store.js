@@ -1,4 +1,4 @@
-import { currencyReducer, setBaseCurrency } from './slice';
+import { currencyReducer } from './slice';
 import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
